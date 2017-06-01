@@ -1,11 +1,6 @@
 body{
     background: #0dcecd;
 }
-.carousel-control{
-    font-size: 40px;
-    width: 40px;
-    height: 80px;
-}
 .load-container {
     width: 100vw;
     height: 100vh;
@@ -14,51 +9,53 @@ body{
     overflow: hidden;
     box-sizing: border-box;
 }
-/*load1样式*/
-.load1 .loader,
-.load1 .loader:before,
-.load1 .loader:after{
-    background: #fff;
-    animation: load1 1s infinite ease-in-out;
-    width: 1em;
-    height: 4em;
-}
 
-.load1 .loader:before,
-.load1 .loader:after{
-    position:absolute;
-    top:0;
-    content:'';
+/*load1样式*/
+.load1 .loader{
+    font-size:10px;
+    margin:5em auto;
+    text-indent:-9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #fff;
+    background:linear-gradient(to right, #fff 10%, rgba(255,255,255,0) 42%);
+    position:relative;
+    animation: load1 1.4s infinite linear;
 }
 .load1 .loader:before{
-    left:-1.5em;
-    animation-delay:-0.32s;
+    width:50%;
+    height:50%;
+    background: #fff;
+    border-radius:100% 0 0 0;
+    position: absolute;
+    top:0;
+    left:0;
+    content:'';
 }
-.load1 .loader{
-    text-indent: -9999em;
-    margin:8em auto;
-    position:relative;
-    font-size: 11px;
-    animation-delay:-0.16s;
-}
-
 .load1 .loader:after{
-    left: 1.5em;
-    animation-delay: 0s;
+    background: #0dcecd;
+    width:80%;
+    height:80%;
+    border-radius:50%;
+    content:'';
+    margin:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
 }
 
 @keyframes load1{
-    0%,
-    80%,
-    100%{
-        box-shadow:0 0 #fff;
-        height: 4em;
+    0%{
+        transform:rotate(0deg);
     }
-    40%{
-        box-shadow:0 -2em #fff;
-        height: 5em;
+    100%{
+        transform:rotate(360deg);
     }
 }
+
 /*load2样式*/
 .load2 .loader,
 .load2 .loader:before,
@@ -111,52 +108,52 @@ body{
         transform: rotate(360deg);
     }
 }
-
 /*load3样式*/
-.load3 .loader{
-    font-size:10px;
-    margin:5em auto;
-    text-indent:-9999em;
-    width: 11em;
-    height: 11em;
-    border-radius: 50%;
-    background: #fff;
-    background:linear-gradient(to right, #fff 10%, rgba(255,255,255,0) 42%);
-    position:relative;
-    animation: load3 1.4s infinite linear;
-}
-.load3 .loader:before{
-    width:50%;
-    height:50%;
-    background: #fff;
-    border-radius:100% 0 0 0;
-    position: absolute;
-    top:0;
-    left:0;
-    content:'';
-}
+.load3 .loader,
+.load3 .loader:before,
 .load3 .loader:after{
-    background: #0dcecd;
-    width:80%;
-    height:80%;
-    border-radius:50%;
-    content:'';
-    margin:auto;
+    background: #fff;
+    animation: load3 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+
+.load3 .loader:before,
+.load3 .loader:after{
     position:absolute;
     top:0;
-    left:0;
-    bottom:0;
-    right:0;
+    content:'';
+}
+.load3 .loader:before{
+    left:-1.5em;
+    animation-delay:-0.32s;
+}
+.load3 .loader{
+    text-indent: -9999em;
+    margin:8em auto;
+    position:relative;
+    font-size: 11px;
+    animation-delay:-0.16s;
+}
+
+.load3 .loader:after{
+    left: 1.5em;
+    animation-delay: 0s;
 }
 
 @keyframes load3{
-    0%{
-        transform:rotate(0deg);
-    }
+    0%,
+    80%,
     100%{
-        transform:rotate(360deg);
+        box-shadow:0 0 #fff;
+        height: 4em;
+    }
+    40%{
+        box-shadow:0 -2em #fff;
+        height: 5em;
     }
 }
+
 /*load4样式*/
 .load4 .loader {
     font-size: 20px;
