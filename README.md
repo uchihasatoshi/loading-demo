@@ -1,6 +1,6 @@
 ## 几种loading的效果 ##
 ### 项目简介 ##
-1. 预览地址
+1. 预览地址 http://www.animepc.me/loading-demo/.
 
 ### 项目说明
 1. 项目效果以轮播的方式展示
